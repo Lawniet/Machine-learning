@@ -6,4 +6,5 @@ elaborado pelo [Phd Doctor Jordi Torres](https://www.linkedin.com/in/jorditorres
 [The Gradient](https://thegradient.pub/state-of-ml-frameworks-2019-pytorch-dominates-research-tensorflow-dominates-industry/), na qual há dados estatísticos 
 comparativos entre as frameworks.
 
-## Versão executável disponível no [Kaggle](https://www.kaggle.com/lauanyreisdasilva/redeneural-tensorflow-pytorch/comments), aceito críticas, sugestões e melhorias.
+## Ambiente Jupiter Notebook 
+Versão executável disponível no [Kaggle](https://www.kaggle.com/lauanyreisdasilva/redeneural-tensorflow-pytorch/comments), aceito críticas, sugestões e melhorias.
