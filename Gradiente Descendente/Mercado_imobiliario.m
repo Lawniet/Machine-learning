@@ -1,9 +1,9 @@
 clear;
 clc;
 
-% 1� coluna = �rea do im�vel (em p�s quadrados �squared feet�)
-% 2� coluna = n�mero de quartos 
-% 3� coluna = valor desse im�vel
+% 1ª coluna = área do imóvel (em pés quadrados "squared feet")
+% 2ª coluna = número de quartos 
+% 3ª coluna = valor desse imóvel
 Imovel = load("data.mat");
          
 area = Imovel(1:47,1);
