@@ -4,7 +4,7 @@ clear;clc;
 % Pacote necessário para o funcionamento do Elbow Method
 pkg load statistics;
 
-X = load('data.mat'); 
+X = load('data_1.mat'); 
 % Separação dos dados para facilitar na manipulação
 carbon = X.carbon;
 millage = X.millage;
