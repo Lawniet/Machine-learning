@@ -1,5 +1,6 @@
-clear;
-clc;
+% Trabalho de Marchine Learning, Gradiente descendente
+% Autora: Lauany Reis da Silva
+clear;clc;
 
 % 1ª coluna = área do imóvel (em pés quadrados "squared feet")
 % 2ª coluna = número de quartos 
