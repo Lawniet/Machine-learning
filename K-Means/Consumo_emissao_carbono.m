@@ -1,25 +1,25 @@
 % Trabalho de Marchine Learning, K-Means
 % Autora: Lauany Reis da Silva
 clear;clc;
-% Pacote necess·rio para o funcionamento do Elbow Method
+% Pacote necess√°rio para o funcionamento do Elbow Method
 pkg load statistics;
 
 X = load('data.mat'); 
-% SeparaÁ„o dos dados para facilitar na manipulaÁ„o
+% Separa√ß√£o dos dados para facilitar na manipula√ß√£o
 carbon = X.carbon;
 millage = X.millage;
 model = X.model;
-% Emiss„o total de carbono por carro
+% Emiss√£o total de carbono por carro
 Gasto_final = carbon .* millage;
 
-% Para a escolha do K Ûtimo optou-se por usar 
-% o Elbow Method, sendo que foi utilizada a implementaÁ„o
-% pronta no site do Matlab, sob licenÁa Copyright (c) 2018, Sebastien De Landtsheer
+% Para a escolha do K √≥timo optou-se por usar 
+% o Elbow Method, sendo que foi utilizada a implementa√ß√£o
+% pronta no site do Matlab, sob licen√ßa Copyright (c) 2018, Sebastien De Landtsheer
 % https://www.mathworks.com/matlabcentral/fileexchange/65823-kmeans_opt-optimal-k-means-with-elbow-method
 [IDX,C,SUMD,K]=kmeans_opt(Gasto_final);
 max_iterations = 10;
 
-% InicializaÁ„o dos centroids com valores aleatÛrios
+% Inicializa√ß√£o dos centroids com valores aleat√≥rios
 centroids = zeros(K,size(Gasto_final,2));
 randidx = randperm(size(Gasto_final,1));
 centroids = Gasto_final(randidx(1:K), :);
@@ -53,7 +53,7 @@ centroids_aux = sort(centroids);
 for i = 1:max_iterations
     indices = getClosestCentroids(Gasto_final,centroids_aux);
 end
-% RotulaÁ„o com cor e conceito de acordo com os centroids no eixo Y
+% Rotula√ß√£o com cor e conceito de acordo com os centroids no eixo Y
 for i = 1:80
       [color, concept] = lettering (indices (i));
       concepts(:,i) = concept;
@@ -65,7 +65,7 @@ text (85, 29, "Ruim", "color",'y');
 text (85, 28.5, "Regular", "color",'c');
 text (85, 28, "Bom", "color",'b');
 text (85, 27.5, "Otimo", "color",'g');
-% MÈdias de consumo solicitadas
+% M√©dias de consumo solicitadas
 targets ={"Pessimo", "Ruim", "Regular", "Bom", "Otimo"} ;
 avg_m = [];
 avg_c = [];
@@ -85,7 +85,7 @@ for i = 1:5
     axi_y += 0.5;
 end
 hold off
-% Parte interativa para a rotulaÁ„o de cada carro pelo eixo X
+% Parte interativa para a rotula√ß√£o de cada carro pelo eixo X
 but = 1;
 while but == 1
     [xi, yi, but] = ginput(1);
